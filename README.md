@@ -2,9 +2,9 @@
 
 * [Webgunea Dokumentazio eleaniztuna](https://github.com/xxai-doc)
 
-Webgunearen frontend kodea kode irekikoa da, ongi etorria itzulpena optimizatzen laguntzeko
+Webgunearen frontend kodea kode irekia da, ongi etorria itzulpena optimizatzen laguntzeko
 
-* [frontend kodea](https://github.com/xxai-art/web)
+* [Frontend kodea](https://github.com/xxai-art/web)
 * [Gune osorako hizkuntza paketeak](https://github.com/xxai-art/web/tree/main/i18n)
 * [Saioa hasteko moduluen hizkuntza paketeak](https://github.com/wacpkg/user/tree/main/ui.i18n)
 * [Webgunea Dokumentazio eleaniztuna](https://github.com/xxai-doc)
