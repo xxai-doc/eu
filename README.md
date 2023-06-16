@@ -28,3 +28,47 @@ Eraiki ondorengo 3 proiektuetan
 * [@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
 
   `yaml` sortutako webguneak itzultzeko hizkuntza-fitxategiak.
+
+### Dokumentuen Itzulpena Automatizatzeko Argibideak
+
+Ikus [xxai-art/doc](https://github.com/xxai-art/doc) biltegia
+
+Lehenengo nodejs, [direnv](https://direnv.net) eta [bun](https://github.com/oven-sh/bun) instalatzea gomendatzen da, eta gero `direnv allow` exekutatu direktorioa sartu ondoren.
+
+Ehunka hizkuntzatara itzulitako biltegi handiegiak ekiditeko, hizkuntza bakoitzerako kode-biltegi bereizia sortu nuen eta biltegi hau gordetzeko erakunde bat sortu nuen.
+
+`GITHUB_ACCESS_TOKEN` ingurune-aldagaia ezarriz eta, ondoren, [create.github.coffee](https://github.com/xxai-art/doc/blob/main/create.github.coffee) exekutatuz gero, biltegia automatikoki sortuko da.
+
+Jakina, biltegi batean ere jar dezakezu.
+
+Itzulpen script erreferentzia [run.sh](https://github.com/xxai-art/doc/blob/main/run.sh)
+
+Script kodea honela interpretatzen da:
+
+[bunx](https://bun.sh/docs/cli/bunx) npx-ren ordezkoa da, azkarragoa dena. Noski, bun instalatuta ez baduzu, ordez `npx` erabil dezakezu.
+
+`bunx mdt zh` k `.mdt` errendatzen du zh direktorioan `.md` gisa, ikusi beheko estekatutako 2 fitxategiak
+
+* [kafea_plus.mdt](https://github.com/xxai-doc/zh/blob/main/coffee_plus.mdt)
+* [kafea_plus.md](https://github.com/xxai-doc/zh/blob/main/coffee_plus.md)
+
+`bunx i18n` da itzulpenaren oinarrizko kodea ( `nodejs` instalatuta bakarrik baduzu, baina `bun` eta `direnv` instalatuta ez badaude, `npx i18n` ere exekutatu dezakezu itzultzeko).
+
+[i18n.yml](https://github.com/xxai-art/doc/blob/main/i18n.yml) analizatuko du, dokumentu honetan `i18n.yml` ren konfigurazioa honako hau da:
+
+```
+en:
+zh: ja ko en
+```
+
+Esanahia hau da: txinera itzulpena japonierara, koreera, ingelesa, ingelesa beste hizkuntza guztietara. Txinera eta ingelesa bakarrik onartu nahi badituzu, `zh: en` idatz dezakezu.
+
+Azkena [gen.README.coffee](https://github.com/xxai-art/doc/blob/main/gen.README.coffee) da, eta hizkuntza bakoitzaren `README.md` ren izenburu nagusiaren eta lehen azpitituluaren arteko edukia ateratzen du sarrera bat sortzeko `README.md` . Kodea oso erraza da, zuk zeuk begiratu dezakezu.
+
+Google APIa doako itzulpenetarako erabiltzen da. Ezin baduzu Google-ra sartu, mesedez konfiguratu eta ezarri proxy bat, hala nola:
+
+```
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+```
+
+Itzulpen script-ak itzulpen-cache bat sortuko du `.i18n` direktorioan, mesedez egiaztatu `git status` eta gehitu kode biltegian itzulpen errepikatuak saihesteko.
