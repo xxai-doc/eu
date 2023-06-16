@@ -1,10 +1,10 @@
 <p align="center"><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/logo.svg"/></a><br/><a href="https://xxai.art"><img src="https://cdn.jsdelivr.net/gh/xxai-art/doc/xxai.svg"/></a></p><p align="center"><a href="https://github.com/xxai-art/doc#readme"><img alt="I18N" src="https://cdn.jsdelivr.net/gh/wactax/img/t.svg"/></a>　<a href="https://groups.google.com/u/0/g/xxai-art"><img alt="Google Groups" src="https://cdn.jsdelivr.net/gh/wactax/img/g-groups.svg"/></a></p>
 
-# xxAI.art
+Nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) instalatzea gomendatzen da lehenik, eta ondoren `direnv allow` direktorioa sartu ondoren ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) automatikoki exekutatuko da direktorioan sartu ondoren).
 
-Webgunearen kodearen zati bat kode irekikoa da, ongi etorria itzulpena optimizatzen laguntzeko.
+Esanahia hau da: txinera itzulpena japonierara, koreera, ingelesa, ingelesa beste hizkuntza guztietara. Txinera eta ingelesa bakarrik onartu nahi badituzu, `zh: en` idatz dezakezu.
 
-## frontend kodea
+Esanahia hau da: txinera itzulpena japonierara, koreera, ingelesa, ingelesa beste hizkuntza guztietara. Txinera eta ingelesa bakarrik onartu nahi badituzu, `zh: en` idatz dezakezu.
 
 * [frontend kodea](https://github.com/xxai-art/web)
 * [Gune osorako hizkuntza paketeak](https://github.com/xxai-art/web/tree/main/i18n)
@@ -31,15 +31,15 @@ Eraiki ondorengo 3 proiektuetan
 
 ### Dokumentuen Itzulpena Automatizatzeko Argibideak
 
-Ikus [xxai-art/doc](https://github.com/xxai-art/doc) biltegia
+Ikusi [xxai-art/doc](https://github.com/xxai-art/doc) kode biltegia
 
-Lehenengo nodejs, [direnv](https://direnv.net) eta [bun](https://github.com/oven-sh/bun) instalatzea gomendatzen da, eta gero `direnv allow` exekutatu direktorioa sartu ondoren.
+Nodejs, [direnv](https://direnv.net) , [bun](https://github.com/oven-sh/bun) instalatzea gomendatzen da lehenik, eta ondoren `direnv allow` direktorioa sartu ondoren ( [.envrc](https://github.com/xxai-art/doc/blob/main/.envrc) automatikoki exekutatuko da direktorioan sartu ondoren).
 
-Ehunka hizkuntzatara itzulitako biltegi handiegiak ekiditeko, hizkuntza bakoitzerako kode-biltegi bereizia sortu nuen eta biltegi hau gordetzeko erakunde bat sortu nuen.
+Ehunka hizkuntzatara itzultzen den kode-oinarri handia saihesteko, hizkuntza bakoitzerako kode-oinarri bereizia sortu nuen eta kode-oinarria gordetzeko erakunde bat sortu nuen.
 
-`GITHUB_ACCESS_TOKEN` ingurune-aldagaia ezarriz eta, ondoren, [create.github.coffee](https://github.com/xxai-art/doc/blob/main/create.github.coffee) exekutatuz gero, biltegia automatikoki sortuko da.
+`GITHUB_ACCESS_TOKEN` ingurune-aldagaia ezartzeak eta, ondoren, [create.github.coffee](https://github.com/xxai-art/doc/blob/main/create.github.coffee) exekutatzeak automatikoki sortuko du kode biltegia.
 
-Jakina, biltegi batean ere jar dezakezu.
+Jakina, kode base batean ere jar dezakezu.
 
 Itzulpen script erreferentzia [run.sh](https://github.com/xxai-art/doc/blob/main/run.sh)
 
@@ -71,4 +71,8 @@ Google APIa doako itzulpenetarako erabiltzen da. Ezin baduzu Google-ra sartu, me
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 ```
 
-Itzulpen script-ak itzulpen-cache bat sortuko du `.i18n` direktorioan, mesedez egiaztatu `git status` eta gehitu kode biltegian itzulpen errepikatuak saihesteko.
+Itzulpen script-ak `.i18n` direktorioan itzulitako cache bat sortuko du, mesedez egiaztatu `git status` eta gehitu kode biltegian itzulpenak errepika ez daitezen.
+
+Mesedez, exekutatu `bunx i18n` itzulpena aldatzen duzun bakoitzean cachea eguneratzeko.
+
+Jatorrizko testua eta itzulpena aldi berean aldatzen badira, cachea nahastu egingo da, beraz, aldatu nahi baduzu, bakarra alda dezakezu eta, ondoren, exekutatu `bunx i18n` cachea eguneratzeko.
