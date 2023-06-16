@@ -17,14 +17,14 @@ Front-end programazio-lengoaia [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plu
 
 Eraiki ondorengo 3 proiektuetan
 
-### [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
+* [@w5/mdt](https://www.npmjs.com/package/@w5/mdt)
 
-Markdown txantiloiak, `.mdt` atzizkiarekin, `<+ ./coffee_plus/import.js>` antzeko sintaxia duten kanpoko fitxategietara jo dezake.
+  Atzizkia `.mdt` da, `<+ ./coffee_plus/import.js>` antzeko sintaxia erabil dezakezu kanpoko fitxategiak aipatzeko eta `.md` atzizkiarekin markdown sortu.
 
-[@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
+* [@w5/trmd](https://www.npmjs.com/package/@w5/trmd)
 
-Markdown itzulpenak ez ditu kodeak eta estekak itzuliko, eta itzulitako esaldiak gordeko ditu. Itzulpena aldatzen bada baina jatorrizko testua aldatzen ez bada, berriro exekutatzeak ez du itzulpenaren aldaketa gainidatziko.
+  Markdown itzulpenak ez ditu kodeak eta estekak itzuliko, eta itzulitako esaldiak gordeko ditu. Itzulpena aldatzen bada baina jatorrizko testua aldatzen ez bada, berriro exekutatzeak ez du itzulpenaren aldaketa gainidatziko.
 
-[@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
+* [@w5/i18n](https://www.npmjs.com/package/@w5/i18n)
 
-`yaml` sortutako webguneak itzultzeko hizkuntza-fitxategiak.
+  `yaml` sortutako webguneak itzultzeko hizkuntza-fitxategiak.
