@@ -2,13 +2,13 @@
 
 [@w5/coffee_plus](http://npmjs.com/@w5/coffee_plus) , gehitu ezaugarri batzuk coffeescript sintaxiaren arabera, ikusi [coffee_plus](./coffee_plus.md) .
 
-* aldagaia deklaratu
+## aldagaia deklaratu
 
 ```
 + var1, var2
 ```
 
-* aitorpen-etiketa
+## aitorpen-etiketa
 
 `:$` [svelte-rekin](https://svelte.dev/docs#component-format-script-3-$-marks-a-statement-as-reactive) erabiltzeko da.
 
@@ -90,7 +90,7 @@ $ : (func = function() {
 });
 ```
 
-* inportazio azkarra
+## inportazio azkarra
 
 ```
 > zx/globals:
